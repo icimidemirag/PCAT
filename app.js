@@ -20,6 +20,9 @@ app.get('/about', (req, res) => {
 app.get('/add', (req, res) => {
   res.render('add');
 });
+app.get('/photo', (req, res) => {
+  res.render('photo');
+});
 
 const port = 3000;
 app.listen(port, () => {

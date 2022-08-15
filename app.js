@@ -5,11 +5,12 @@ const methodOverride = require('method-override');
 const ejs = require('ejs');
 const photoController = require('./controllers/photoControllers');
 const pageController = require('./controllers/pageController');
+require("dotenv").config()
 
 const app = express();
 
 //connect DB
-mongoose.connect('mongodb+srv://icimi:12345@cluster0.ivy98pd.mongodb.net/pcat-db', {
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }).then(res=>{
